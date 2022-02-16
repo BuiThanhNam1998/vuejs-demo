@@ -57,13 +57,11 @@ export default {
 
   beforeUpdate () {
     console.log('Before update');
-    // this.message is underfined
     console.log('Message: ', this.message);
   },
 
   updated() {
-    console.log('Update');
-    // this.message is underfined
+    console.log('Updated');
     console.log('Message: ', this.message);
   }
 };
