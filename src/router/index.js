@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Demo from '@/components/Demo'
 import DemoForm from '@/components/DemoForm'
 import ListPost from '@/components/ListPost'
+import TaskDashboard from '@/components/Task/TaskDashboard'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/posts',
       name: 'ListPost',
       component: ListPost
-    }
+    },
+    {
+      path: '/tasks',
+      name: 'TaskDashboard',
+      component: TaskDashboard
+    },
   ]
 })
