@@ -24,10 +24,12 @@
 
 <script>
 export default {
-  data: function() {
-    return {
-      handlingTask: this.$store.state.handlingTask,
-    };
+  computed: {
+    handlingTask: {
+      get() {
+        return this.$store.state.handlingTask
+      }
+    }
   },
   name: 'TaskForm',
   methods: {
