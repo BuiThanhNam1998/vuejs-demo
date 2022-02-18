@@ -13,6 +13,7 @@
         <task-item
           v-for="(task, index) in listTasks"
           v-bind:task="task"
+          :key="task.id"
         ></task-item>
       </tbody>
     </table>
@@ -21,6 +22,7 @@
 
 <script>
 import TaskItem from './TaskItem';
+import { mapState } from 'vuex'
 export default {
   data: function() {
     return {
@@ -30,6 +32,6 @@ export default {
   components: {
     TaskItem
   },
-  name: 'TaskList',
+  name: 'TaskList'
 };
 </script>

@@ -5,6 +5,10 @@
       <task-form></task-form>
     </div>
     <div class="col-sm-8">
+      <button type="button" class="btn-add-task btn btn-primary" @click="resetHandlingTask">
+          Add Task
+      </button>
+
       <task-list></task-list>
     </div>
   </div>
@@ -14,16 +18,22 @@
 import TaskForm from './TaskForm';
 import TaskList from './TaskList';
 export default {
-  data: function() {
-    return {
-      sizeChange: 1
-    };
-  },
   components: {
     TaskList,
     TaskForm
   },
   name: 'TaskDashboard',
+  methods: {
+    resetHandlingTask() {
+      this.$store.dispatch('resetHandlingTask')
+    }
+  }
 };
 </script>
+
+<style>
+.btn-add-task {
+  margin-bottom: 10px;
+}
+</style>
 

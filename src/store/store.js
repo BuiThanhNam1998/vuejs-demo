@@ -15,6 +15,7 @@ export default new VueX.Store({
       id: '',
       title: '',
       description: '',
+      status: false,
     },
   }),
   mutations: mutations,
